@@ -5,6 +5,7 @@ import { useStateValue } from "../../StateProvider/StateProvider";
 import CheckoutProducts from "../CheckoutProducts/CheckoutProducts";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../ScrolToTop/ScrollToTop";
+import emptyCart from "../../emptycart.png";
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -27,7 +28,7 @@ function Checkout() {
             <div className="checkout__emptyBasket">
               <img
                 className="checkout__emptyBasketImg"
-                src="https://lh3.googleusercontent.com/proxy/jx8w_tLA7qL9gDxyUBiZ05k1HAy9n7NOccoTmsyGOo6orbUGZhUZbc4a3jM2Po6rAco2bAUkZ0ctk5vFjUcBmC5vKaSmuDs30yxNlZPN"
+                src={emptyCart}
                 alt="empty basket"
               />
               <Link to="./">
@@ -49,7 +50,7 @@ function Checkout() {
               rating={item.rating}
             />
           ))}
-          {basket.length >= 2 && <ScrollToTop />}
+          {basket.length >= 1 && <ScrollToTop />}
         </div>
       </div>
 

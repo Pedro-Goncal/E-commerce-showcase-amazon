@@ -66,6 +66,7 @@ a {
 .header__basketCount {
   margin-left: 10px;
   margin-right: 10px;
+  font-size: 16px;
 }
 
 .header__nav {
@@ -79,4 +80,56 @@ a {
   margin-left: 10px;
   margin-right: 10px;
   color: white;
+}
+
+/*=====================*/
+/*====SECOND HEADER====*/
+/*=====================*/
+
+.second__header {
+  background-color: #232f3e;
+  height: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.second__header__titles {
+  font-size: 12px;
+  padding: 8px;
+}
+
+.second__header__location {
+  padding: 8px;
+}
+
+.second__header__icon {
+  padding-left: 8px;
+}
+
+.second__header__location__delivers {
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.Second__header__location__location {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+.second__header__covid {
+  font-size: 14px;
+  padding-right: 30px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.border:hover {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
 }

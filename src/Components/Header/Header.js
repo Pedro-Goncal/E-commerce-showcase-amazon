@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import LocationOn from "@material-ui/icons/LocationOn";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider/StateProvider";
 import { auth } from "../../firebase";
 
 function Header() {
   const [{ basket, user }] = useStateValue();
+  const [geo, setGeo] = useState([]);
 
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
     }
   };
+
+  useEffect(() => {
+    async function fetchGeo() {
+      fetch(
+        "https://geolocation-db.com/json/7733a990-ebd4-11ea-b9a6-2955706ddbf3"
+      )
+        .then((response) => response.json())
+        .then((data) => setGeo(data));
+    }
+    fetchGeo();
+  }, []);
 
   return (
     <div>
@@ -66,9 +79,53 @@ function Header() {
         </div>
       </div>
       <div className="second__header">
+        <div className="second__header__icon">
+          <LocationOn />
+        </div>
         <div className="second__header__location">
-          <p className="header__location">Returns</p>
-          <p className="header__location">Returns</p>
+          <p className="second__header__location__delivers">
+            Delivers to {user ? user?.email : null}
+          </p>
+          <p className="second__header__location__location">
+            {geo.city} {geo.postal}
+          </p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">Toda's Deals</p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">User's Amazone.com</p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">Customer Service</p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">Browsing History</p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">Buy again</p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">Gift Cards</p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">Registry</p>
+        </div>
+
+        <div className="second__header__titles border">
+          <p className="Second__header__subTitles">Sell</p>
+        </div>
+        <div className="second__header__covid border">
+          <p className="Second__header__location">
+            Amazon's response to COVID-19
+          </p>
         </div>
       </div>
     </div>

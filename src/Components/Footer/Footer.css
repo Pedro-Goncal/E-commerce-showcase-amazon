@@ -1,9 +1,3 @@
-.footer > a {
-  text-decoration: none;
-  color: #fff;
-  cursor: pointer;
-}
-
 .footer {
   background-color: #232f3e;
   color: #fff;
@@ -11,6 +5,17 @@
   justify-content: space-evenly;
   padding: 50px;
   font-family: "Roboto", sans-serif;
+}
+
+.footer > a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #fff;
 }
 
 .footer > h3 {
@@ -26,7 +31,7 @@
   line-height: 25px;
 }
 
-.footer > p:hover {
+.footer__links > p:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -43,8 +48,13 @@
   border-top: 0.2px solid rgba(255, 255, 255, 0.145);
 }
 
+.footer__logo {
+  margin-bottom: 15px;
+}
+
 .footer__subFooter_link {
   text-decoration: underline !important;
+  color: #fff;
 }
 
 .footer__subFooter__disclaimer {

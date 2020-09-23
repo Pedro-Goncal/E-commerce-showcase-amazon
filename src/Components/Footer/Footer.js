@@ -43,7 +43,7 @@ function Footer() {
             <p>Amazon and COVID-19</p>
             <p>Your Account</p>
             <Link to="/orders">
-              <p>Your Orders</p>
+              <p className="footer__link">Your Orders</p>
             </Link>
             <p>Shipping Rates & Policies</p>
             <p>Amazon Prime</p>
