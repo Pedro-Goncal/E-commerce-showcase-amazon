@@ -1,0 +1,17 @@
+.scrollTop {
+  outline: none;
+  border: none;
+  background-color: #485769;
+  width: 100%;
+}
+
+.scrollTop__text {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  font-size: 13px;
+  line-height: 19px;
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+}
