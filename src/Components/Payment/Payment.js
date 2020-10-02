@@ -6,13 +6,13 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../../Reducer/Reducer";
 import axios from "../../axios";
 import { db } from "../../firebase";
+import CurrencyFormat from "react-currency-format";
 
 //Style
 import "./Payment.css";
 
 //Components
 import CheckoutProducts from "../CheckoutProducts/CheckoutProducts";
-import CurrencyFormat from "react-currency-format";
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
