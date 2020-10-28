@@ -5,6 +5,7 @@ APP showcasing full E-Commerce reactJs app
 FEATURES:
 
 -Full user authentication using firebase
+-Google and Facebook uset authentication login
 -Optimized firebase database for product purchase storage
 -Optimize user only order history page
 -Card payment authorization fully secured with strip payment
