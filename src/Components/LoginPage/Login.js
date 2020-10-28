@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "../../firebase";
+import { auth, facebookAuth, googleAuth } from "../../firebase";
+
+import GoogleButton from "react-google-button";
+import FacebookLogin from "react-facebook-login";
 
 function Login() {
   const history = useHistory();
@@ -32,6 +35,26 @@ function Login() {
         }
       })
       .catch((error) => alert(error.message));
+  };
+
+  const facebook = async (e) => {
+    e.preventDefault();
+    await auth
+      .signInWithPopup(facebookAuth)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => alert(error.credentrial));
+  };
+
+  const google = async (e) => {
+    e.preventDefault();
+    await auth
+      .signInWithPopup(googleAuth)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => alert(error.credentrial));
   };
 
   return (
@@ -69,12 +92,35 @@ function Login() {
             Sign In
           </button>
         </form>
+        <div className="login__fgContainer">
+          <div>
+            <GoogleButton
+              className="login__google"
+              type="light" // can be light or dark
+              onClick={google}
+            />
+          </div>
+          <div className="login__facebook">
+            <FacebookLogin
+              appId="972555116568268"
+              autoLoad={true}
+              textButton="Sign in with Facebook"
+              fields="name,email,picture"
+              scope="public_profile,user_friends,user_actions.books"
+              size="small"
+              onClick={facebook}
+              icon="fa-facebook"
+            />
+          </div>
+        </div>
         <p>
           By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use &
-          Same. Please see our Privacy Notice, our Cookies Notice and our
-          Interest-Base Ads Notice
+          Same.
         </p>
-
+        <p>
+          Sign in/Sign up with firebase User authentication Or Google and
+          Facebook authentication
+        </p>
         <button onClick={register} className="login__registerButton">
           Create your Amazon Account
         </button>

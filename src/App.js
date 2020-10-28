@@ -47,7 +47,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    //BEM STYLING CONVENTION??
+    //BEM STYLING CONVENTION
     <Router>
       <div className="App">
         <Switch>

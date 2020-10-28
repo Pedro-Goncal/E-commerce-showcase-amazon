@@ -52,6 +52,7 @@
    margin-top: 10px;
    border-color: #a88734 #9c7e31 #846a29;
    color: #111;
+   cursor: pointer;
 }
 
 .login__registerButton {
@@ -60,4 +61,21 @@
    height: 30px;
    border: 1px solid darkgray;
    margin-top: 10px;
+}
+
+
+.login__fgContainer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.login__facebook {
+   margin-top: 10px;
+}
+
+.login__google {
+
+   margin-top: 10px;
+   
 }
