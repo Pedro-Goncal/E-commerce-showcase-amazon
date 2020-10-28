@@ -8,11 +8,11 @@ FEATURES:
 -Google and Facebook uset authentication login
 -Optimized firebase database for product purchase storage
 -Optimize user only order history page
--Card payment authorization fully secured with strip payment
+-Card payment authorization fully secured with stripe payment
 -ReactJs optimized usage of containers for ease of scaling
 -Responsive design
 
 COMING SOON FEATURES:
 -Firebase data base for products storage
 -Search functionality with access to firebase db
--Product categorizatio and filter on search page
+-Product categorization and filter on search page
