@@ -1,18 +1,21 @@
-===============Full E-Commerce ReactJs App Amazon look alike===============
+# Full E-Commerce ReactJs App 
 
-APP showcasing full E-Commerce reactJs app
 
-FEATURES:
+### Features:
 
--Full user authentication using firebase
--Google and Facebook uset authentication login
--Optimized firebase database for product purchase storage
--Optimize user only order history page
--Card payment authorization fully secured with stripe payment
--ReactJs optimized usage of containers for ease of scaling
--Responsive design
+* Full user authentication using **Firebase**
+* **Google** and **Facebook** user authentication login
+* Optimized **Firebase** database for product purchased storage
+* Optimized, user only, order history page
+* Card payment authorization fully secured with **_Strip_** payment
+* Optimized usage of containers for ease of scaling
 
+
+####
 COMING SOON FEATURES:
--Firebase data base for products storage
--Search functionality with access to firebase db
--Product categorization and filter on search page
+* **Firebase** data base for products storage
+* Search functionality with access to **Firebase** db
+* Product categorization and filter on search page
+
+
+#### For More info Please check out my [LinkedIn](https://www.linkedin.com/in/pedro-goncalves88)
