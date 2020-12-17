@@ -11,8 +11,7 @@
 * Optimized usage of containers for ease of scaling
 
 
-####
-COMING SOON FEATURES:
+#### COMING SOON FEATURES:
 * **Firebase** data base for products storage
 * Search functionality with access to **Firebase** db
 * Product categorization and filter on search page
