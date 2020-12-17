@@ -8,7 +8,7 @@ import ScrollToTop from "../ScrolToTop/ScrollToTop";
 import emptyCart from "../../emptycart.png";
 
 function Checkout() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
   return (
     <div className="checkout">

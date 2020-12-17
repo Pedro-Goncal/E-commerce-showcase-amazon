@@ -3,6 +3,7 @@ import "./CheckoutProducts.css";
 import { useStateValue } from "../../StateProvider/StateProvider";
 
 function CheckoutProducts({ id, image, title, price, rating, hideButton }) {
+  // eslint-disable-next-line no-unused-vars
   const [basket, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
@@ -27,7 +28,9 @@ function CheckoutProducts({ id, image, title, price, rating, hideButton }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>🌟</p>
+              <span role="img" aria-label="Snowman">
+                🌟
+              </span>
             ))}
         </div>
         {!hideButton && (
